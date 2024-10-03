@@ -1,4 +1,4 @@
-export default function indexPage() {
+export default function IndexPage() {
     
     return (
 
