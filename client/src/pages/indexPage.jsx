@@ -1,4 +1,4 @@
-import Header from "../Header";
+
 
 export default function IndexPage() {
     
@@ -6,7 +6,7 @@ export default function IndexPage() {
 
         <div>
 
-            <Header />
+            index page content here
 
         </div>
     )
