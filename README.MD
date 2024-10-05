@@ -1,4 +1,4 @@
-# AIRBNB CLONE <a href="https://emoji.gg/emoji/4560-airbnb"><img src="https://cdn3.emoji.gg/emojis/4560-airbnb.png" width="64px" height="64px" alt="Airbnb"></a>
+# AIRBNB CLONE <a href="https://emoji.gg/emoji/4560-airbnb"><img src="https://cdn3.emoji.gg/emojis/4560-airbnb.png" width="32px" height="32px" alt="Airbnb"></a>
 
 ## Airbnb 
 
