@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
     return (
         <div>
-            {/* HEADER SECT */}
+
             <header className='flex justify-between '>
                 <a href="" className="flex items-center gap-1 text-primary">
                     <a href="https://emoji.gg/emoji/4560-airbnb"><img src="https://cdn3.emoji.gg/emojis/4560-airbnb.png" className="w-8 h-8" alt="Airbnb"></img></a>
@@ -41,7 +41,7 @@ export default function Header() {
                 </Link>
 
             </header>
-            {/* HEADER SECT ENDS*/}
+
         </div>
     )
 };
