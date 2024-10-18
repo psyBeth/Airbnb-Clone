@@ -10,3 +10,6 @@
 - **Vite:**
 - **yarn:**
 - **Tailwind CSS:**
+- **Express:**
+- **Nodemon:**
+- **Axios:**
