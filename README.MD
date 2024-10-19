@@ -10,6 +10,6 @@
 - **Vite:**
 - **yarn:**
 - **Tailwind CSS:**
-- **Express:**
+- **Express JS:** Fast and flexible Node.js web application framework.
 - **Nodemon:**
-- **Axios:**
+- **Axios:** Axios is a JavaScript library for making HTTP requests and handling responses.
