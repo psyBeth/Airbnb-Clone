@@ -10,7 +10,11 @@ export default function RegisterPage() {
     
     function registerUser(ev) {
         ev.preventDefault();
-        axios.get('/test')
+        axios.post('/register', {
+            name,
+            email,
+            password
+        })
     }
 
     return (
