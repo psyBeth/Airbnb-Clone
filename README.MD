@@ -13,3 +13,4 @@
 - **Express JS:** Fast and flexible Node.js web application framework.
 - **Nodemon:** Tool that automatically restarts a Node.js application when file changes are detected.
 - **Axios:** Axios is a JavaScript library for making HTTP requests and handling responses.
+- **Cors:** Cross-Origin Resource Sharing (CORS) in Node.js applications, allows controlled access to resources from different origins.
