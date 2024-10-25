@@ -15,3 +15,7 @@
 - **Axios:** Axios is a JavaScript library for making HTTP requests and handling responses.
 - **Cors:** Cross-Origin Resource Sharing (CORS) in Node.js applications, allows controlled access to resources from different origins.
 - **MongoDB:** a NoSQL database that stores data in flexible, JSON-like documents, allowing for scalable and high-performance applications.
+
+<br>
+
+mongo atlas - create database and connect
