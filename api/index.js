@@ -10,6 +10,7 @@ app.use(cors({
     origin: 'http://127.0.0.1:5173',
 }))
 
+require('dotenv').config();
 mongoose.connect(process.env.MONGODB)
 
 app.get('/test', (req, res) => {
