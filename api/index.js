@@ -13,6 +13,9 @@ app.get('/test', (req, res) => {
     res.json('test ok');
 });
 
+//! WILL BE CHANGED
+// username: betulkoru06, password: Lpj9lIzqKbvJBjnn
+
 app.post('/register', (req, res) => {
     const {name, email, password} = req.body;
 
