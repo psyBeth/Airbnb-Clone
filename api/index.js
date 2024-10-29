@@ -12,7 +12,7 @@ app.use(cors({
 
 require('dotenv').config();
 mongoose.connect(process.env.MONGODB)
-// console.log(process.env.MONGODB);
+console.log(process.env.MONGODB);
 
 app.get('/test', (req, res) => {
     res.json('test ok');
