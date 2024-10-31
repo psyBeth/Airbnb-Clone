@@ -12,8 +12,8 @@
 - **Tailwind CSS:** Utility-first CSS framework for building custom designs quickly with pre-defined classes.
 - **Express JS:** Fast and flexible Node.js web application framework.
 - **Nodemon:** Tool that automatically restarts a Node.js application when file changes are detected.
+- **dotenv:** Module that loads environment variables from a .env file into process.env in Node.js applications, keeping sensitive configuration data secure.
 - **Axios:** Axios is a JavaScript library for making HTTP requests and handling responses.
-- **Cors:** Cross-Origin Resource Sharing (CORS) in Node.js applications, allows controlled access to resources from different origins.
 - **MongoDB:** a NoSQL database that stores data in flexible, JSON-like documents, allowing for scalable and high-performance applications.
 - **Mongoose:** Object Data Modeling (ODM) library for MongoDB and Node.js, providing a schema-based solution to model and interact with MongoDB data.
-- **dotenv:** Module that loads environment variables from a .env file into process.env in Node.js applications, keeping sensitive configuration data secure.
+- **Cors:** Cross-Origin Resource Sharing (CORS) in Node.js applications, allows controlled access to resources from different origins.
