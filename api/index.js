@@ -1,5 +1,11 @@
+'use strict'
+
+//? Express:
 const express = require('express');
 const app = express();
+
+//? Required modules:
+
 const cors = require('cors');
 const mongoose = require('mongoose');
 
