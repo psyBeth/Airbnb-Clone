@@ -7,7 +7,7 @@ const app = express();
 //? Required modules:
 
 const cors = require('cors');
-const mongoose = require('mongoose');
+const mongoose = require('mongoose');    //! seperate config file!!!!
 
 app.use(express.json());
 
@@ -20,6 +20,15 @@ require('dotenv').config();
 mongoose.connect(process.env.MONGODB)
 // console.log(process.env.MONGODB);
 
+//? Middlewares:
+
+// Accept JSON:
+app.use(express.json());
+
+// Call static upload file:
+
+
+//? Routes:
 app.get('/test', (req, res) => {
     res.json('test ok');
 });
@@ -30,4 +39,10 @@ app.post('/register', (req, res) => {
     res.json({name, email, password});
 } )
 
+//? Error Handler:
+
+
+//? Run server:
 app.listen(4000);
+
+//? Sync:
