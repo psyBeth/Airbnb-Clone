@@ -17,7 +17,7 @@ app.use(cors({
 }))
 
 require('dotenv').config();
-mongoose.connect(process.env.MONGODB)
+mongoose.connect(process.env.MONGODB);
 // console.log(process.env.MONGODB);
 
 //? Middlewares:
