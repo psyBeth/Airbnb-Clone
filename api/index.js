@@ -46,6 +46,6 @@ app.post('/register', (req, res) => {
 
 
 //? Run server:
-app.listen(4000);
+app.listen(PORT, HOST, () => console.log(`http://${HOST}:${PORT}`));
 
 //? Sync:
