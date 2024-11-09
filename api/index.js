@@ -9,8 +9,6 @@ const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');    //! seperate config file!!!!
 
-app.use(express.json());
-
 app.use(cors({
     credentials: true,
     origin: 'http://127.0.0.1:5173',
