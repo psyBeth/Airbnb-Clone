@@ -6,20 +6,25 @@ const app = express();
 
 //? Required modules:
 
-const cors = require('cors');
-const mongoose = require('mongoose');    //! seperate config file!!!!
+// env variables:
+require('dotenv').config();
+const HOST = process.env?.HOST || '127.0.0.1';
+const PORT = process.env?.PORT || 4000;
 
+// async error handler:
+
+// cors:
+const cors = require('cors');
 app.use(cors({
     credentials: true,
     origin: 'http://127.0.0.1:5173',
 }))
 
-require('dotenv').config();
+//? Configurations:
+
+// Database connection:
 const { dbConnection } = require('./src/configs/dbConnection');
 dbConnection();
-
-const HOST = process.env?.HOST || '127.0.0.1';
-const PORT = process.env?.PORT || 4000;
 
 //? Middlewares:
 
