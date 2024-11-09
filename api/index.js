@@ -15,8 +15,8 @@ app.use(cors({
 }))
 
 require('dotenv').config();
-mongoose.connect(process.env.MONGODB);
-// console.log(process.env.MONGODB);
+const { dbConnection } = require('./src/configs/dbConnection');
+dbConnection();
 
 const HOST = process.env?.HOST || '127.0.0.1';
 const PORT = process.env?.PORT || 4000;
