@@ -12,6 +12,7 @@ const HOST = process.env?.HOST || '127.0.0.1';
 const PORT = process.env?.PORT || 4000;
 
 // async error handler:
+require('express-async-errors');
 
 // cors:
 const cors = require('cors');
