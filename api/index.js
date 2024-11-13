@@ -53,3 +53,4 @@ app.post('/register', (req, res) => {
 app.listen(PORT, HOST, () => console.log(`http://${HOST}:${PORT}`));
 
 //? Sync:
+// seperate file for syncronizaiton
