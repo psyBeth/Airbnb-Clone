@@ -17,3 +17,4 @@
 - **MongoDB:** a NoSQL database that stores data in flexible, JSON-like documents, allowing for scalable and high-performance applications.
 - **Mongoose:** Object Data Modeling (ODM) library for MongoDB and Node.js, providing a schema-based solution to model and interact with MongoDB data.
 - **Cors:** Cross-Origin Resource Sharing (CORS) in Node.js applications, allows controlled access to resources from different origins.
+- **express-async-errors:** Package that automatically handles asynchronous errors in Express routes, eliminating the need for try-catch blocks in each route handler.
