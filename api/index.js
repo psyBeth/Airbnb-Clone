@@ -34,6 +34,12 @@ app.use(express.json());
 
 // Call static upload file:
 
+// Auth check:
+
+// Run logger:
+
+// res.getModelList():
+
 
 //? Routes:
 app.get('/test', (req, res) => {
