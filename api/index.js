@@ -46,9 +46,16 @@ app.get('/test', (req, res) => {
     res.json('test ok');
 });
 
+const User = require('./src/models/user');
+
 app.post('/register', (req, res) => {
     const {name, email, password} = req.body;
-
+    User.create({
+        name,
+        email,
+        password,
+        
+    })
     res.json({name, email, password});
 } )
 
