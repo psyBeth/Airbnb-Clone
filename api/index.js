@@ -57,7 +57,8 @@ app.post('/register', (req, res) => {
         
     })
     res.json({name, email, password});
-} )
+} );
+//! SEPERATE CONTROLLER FILE !!!!!!!!
 
 //? Error Handler:
 
