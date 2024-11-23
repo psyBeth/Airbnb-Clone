@@ -33,7 +33,7 @@ module.exports = {
 
         if(!req.user) {
             return res.status(401).send({ error: true, message: "Unauthorized" });
-        }
+        };
 
         res.status(200).send({
             error: false,
@@ -43,6 +43,12 @@ module.exports = {
     },
 
     update: async (req, res) => {
+
+        if(!req.user) {
+            return res.status(401).send({ error: true, message: "Unauthorized" });
+        };
+        
+        
 
     },
 
