@@ -1,9 +1,13 @@
 'use strict'
 
+//! Swaggers will be added
 const User = require('../models/user');
 
 module.exports = {
+
     list: async (req, res) => {
+
+        
 
         const data = await res.getModelList(User, [])   //!!! listing  and pagination file
 
