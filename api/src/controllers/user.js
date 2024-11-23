@@ -31,6 +31,15 @@ module.exports = {
 
     read: async (req, res) => {
 
+        if(!req.user) {
+            return res.status(401).send({ error: true, message: "Unauthorized" });
+        }
+
+        res.status(200).send({
+            error: false,
+            data
+        });
+
     },
 
     update: async (req, res) => {
