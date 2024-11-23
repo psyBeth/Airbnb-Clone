@@ -10,7 +10,7 @@ module.exports = {
         // can only see their own records:
         const customFilters = req.user?.isAdmin ? {} : {_id: req.user.id};
 
-        const data = await res.getModelList(User, customFilters)
+        const data = await res.getModelList(User, customFilters);
 
         res.status(200).send({
             error: false,
