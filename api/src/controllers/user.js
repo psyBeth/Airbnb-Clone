@@ -43,6 +43,10 @@ module.exports = {
             return res.status(401).send({ error: true, message: "Unauthorized" });
         };
 
+        const customFilters = req.user?.isAdmin ? {_id: req.params.id} : {_id: req.user.id};
+
+        const data = await User.findOne(customFilters);
+
         res.status(200).send({
             error: false,
             data
