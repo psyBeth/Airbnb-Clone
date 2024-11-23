@@ -7,13 +7,14 @@ module.exports = {
 
     list: async (req, res) => {
 
-        
+        // can only see their own records:
+        const customFilters = req.user?.isAdmin ? {} : {_id: req.user.id};
 
-        const data = await res.getModelList(User, [])   //!!! listing  and pagination file
+        const data = await res.getModelList(User, customFilters)   //!!! listing  and pagination file
 
         res.status(200).send({
             error: false,
-            details: await res.getModelListDetails(User, []), //!!
+            details: await res.getModelListDetails(User, customFilters), //!!
             data
         });
 
