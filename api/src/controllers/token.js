@@ -27,10 +27,24 @@ module.exports = {
 
     read: async(req, res) => {
 
+        const data = await Token.findOne({_id: req.params.id});
+
+        res.status(200).send({
+            error: false,
+            data
+        });
     },
 
     update: async(req, res) => {
+        
+        const data = await Token.updateOne({_id: req.params.id}, req.body, {runValidators: true});
+        const newData = await Token.findOne({_id: req.params.id});
 
+        res.status(202).send({
+            error: false,
+            data,
+            newData
+        });
     },
 
     delete: async(req, res) => {
