@@ -60,8 +60,18 @@ module.exports = {
             return res.status(401).send({ error: true, message: "Unauthorized" });
         };
         
-        
+        const customFilters = req.user?.isAdmin ? {_id: req.params.id} : {_id: req.user.id};
 
+        //! here: do not allow changing admin/staff
+
+        const data = await User.updateOne(customFilters, req.body, {runValidators: true});
+        const newData = await User.findOne(customFilters);
+
+        res.status(202).send({
+            error: false,
+            data,
+            newData
+        })
     },
 
     delete: async (req, res) => {
