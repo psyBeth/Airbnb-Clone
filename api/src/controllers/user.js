@@ -22,10 +22,13 @@ module.exports = {
 
     create: async (req, res) => {
 
-        // for the new records 
-        // auto login token will be here
+        // for the new records  //! warning
+        req.body.isStaff = false;
+        req.body.isAdmin = false;
 
         const data = await User.create(req.body);
+
+        // auto login token will be here
 
         res.status(201).send({
             error: false,
