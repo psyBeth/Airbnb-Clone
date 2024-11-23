@@ -76,6 +76,19 @@ module.exports = {
 
     delete: async (req, res) => {
 
+        if(req.params.id.toString() !== req.user._id.toString()) {
+            const data = await User.deleteOne({_id: req.params.id});
+
+            res.status(data.deletedCount ? 204 : 404).send({
+                error: !data.deletedCount,
+                data
+            });
+        } else {
+            // admin cannot delete themselves
+            res.errorStatusCode = 403;
+            throw new Error('You cannot remove your account.');
+        };
+
     }
 
 };
