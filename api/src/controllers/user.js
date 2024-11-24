@@ -1,6 +1,6 @@
 'use strict'
 
-//! Swaggers will be added
+
 const User = require('../models/user');
 
 module.exports = {
