@@ -1,6 +1,7 @@
 'use strict'
 
-
+const passwordEncrypt = require('../helpers/passwordEncrypt');
+const Token = require('../models/token');
 const User = require('../models/user');
 
 module.exports = {
@@ -58,10 +59,15 @@ module.exports = {
 
         const data = await User.create(req.body);
 
-        // auto login token will be here
+        // auto login:
+        const tokenData = await Token.create({
+            userId: data._id,
+            token: passwordEncrypt(data._id + Date.now())
+        })
 
         res.status(201).send({
             error: false,
+            token: tokenData.token,
             data
         });
 
