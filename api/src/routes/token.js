@@ -6,7 +6,7 @@ const router = require('express').Router();
 
 const token = require('../controllers/token');
 
-//! URL will be /tokens
+// URL: /tokens
 
 router.route('/')
     .get(token.list)

@@ -6,7 +6,7 @@ const router = require('express').Router();
 
 const user = require('../controllers/user');
 
-//! URL will be /users
+// URL: /users
 
 router.route('/')
     .get(user.list)
