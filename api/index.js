@@ -48,16 +48,26 @@ app.get('/test', (req, res) => {
 
 const User = require('./src/models/user');
 
-app.post('/register', (req, res) => {
-    const {name, email, password} = req.body;
-    User.create({
-        name,
-        email,
-        password,
+// app.post('/register', (req, res) => {
+//     const {name, email, password} = req.body;
+//     User.create({
+//         name,
+//         email,
+//         password,
         
+//     })
+//     res.json({name, email, password});
+// } );
+
+//? Homepath:
+app.all('/', (req, res) => {
+    res.send({
+        error: false,
+        message: 'Airbnb API ok',
+        documents: {},
+        user: req.user
     })
-    res.json({name, email, password});
-} );
+});
 
 
 //? Error Handler:
