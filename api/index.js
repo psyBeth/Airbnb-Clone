@@ -71,7 +71,7 @@ app.all('/', (req, res) => {
 
 
 //? Error Handler:
-
+app.use(require('./src/middlewares/errorHandler'));
 
 //? Run server:
 app.listen(PORT, HOST, () => console.log(`http://${HOST}:${PORT}`));
