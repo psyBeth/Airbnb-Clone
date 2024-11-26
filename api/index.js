@@ -48,6 +48,8 @@ app.get('/test', (req, res) => {
 
 const User = require('./src/models/user');
 
+//! HOMEPATH FIX !!
+//! REGISTER TESTING !!
 // app.post('/register', (req, res) => {
 //     const {name, email, password} = req.body;
 //     User.create({
