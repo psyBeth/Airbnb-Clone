@@ -39,6 +39,7 @@ app.use(express.json());
 // Run logger:
 
 // res.getModelList():
+app.use(require('./src/middlewares/findSearchSortPage'));
 
 
 //? Routes:
