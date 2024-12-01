@@ -47,8 +47,6 @@ app.get('/test', (req, res) => {
     res.json('test ok');
 });
 
-const User = require('./src/models/user');
-
 //! REGISTER TESTING !!
 
 //? Homepath:
@@ -56,7 +54,11 @@ app.all('/', (req, res) => {
     res.send({
         error: false,
         message: 'Airbnb API ok',
-        documents: {},
+        documents: {
+            swagger: '/documents/swagger',
+            redoc: '/documents/redoc',
+            json: '/documents/json',
+        },
         user: req.user
     })
 });
