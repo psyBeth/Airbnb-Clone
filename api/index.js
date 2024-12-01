@@ -62,7 +62,7 @@ app.all('/', (req, res) => {
         user: req.user
     })
 });
-
+app.use(require('./src/routes/index'));
 
 //? Error Handler:
 app.use(require('./src/middlewares/errorHandler'));
