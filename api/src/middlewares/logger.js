@@ -3,8 +3,6 @@
 // $ yarn add morgan
 // app.use(logger);
 
-//! INTEGRATE
-
 const morgan = require('morgan');
 const fs = require('node:fs');
 

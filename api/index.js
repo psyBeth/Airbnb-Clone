@@ -37,6 +37,7 @@ app.use(express.json());
 // Auth check:
 
 // Run logger:
+app.use(require('./src/middlewares/logger'));
 
 // res.getModelList():
 app.use(require('./src/middlewares/findSearchSortPage'));
