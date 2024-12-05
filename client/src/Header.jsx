@@ -5,12 +5,14 @@ export default function Header() {
         <div>
 
             <header className='flex justify-between '>
-                <a href="" className="flex items-center gap-1 text-primary">
-                    <a href="https://emoji.gg/emoji/4560-airbnb"><img src="https://cdn3.emoji.gg/emojis/4560-airbnb.png" className="w-8 h-8" alt="Airbnb"></img></a>
+                <div href="" className="flex items-center gap-1 text-primary">
+                    <a href="">
+                        <img src="https://cdn3.emoji.gg/emojis/4560-airbnb.png" className="w-8 h-8" alt="Airbnb"></img>
+                    </a>
                     <span className='font-bold text-xl'>
                         airbnb
                     </span>
-                </a>
+                </div>
 
                 <div className='flex gap-2 border border-gray-300 rounded-full py-2 px-4 shadow-md shadow-gray-300'>
                     <div>Anywhere</div>
