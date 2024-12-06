@@ -18,7 +18,7 @@ require('express-async-errors');
 const cors = require('cors');
 app.use(cors({
     credentials: true,
-    origin: 'http://127.0.0.1:5173',
+    origin: `${HOST}:4000`,
 }))
 
 //? Configurations:
