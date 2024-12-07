@@ -10,7 +10,7 @@ export default defineConfig({
             '/register': {
                 target: 'http://localhost:4000', // backend server
                 changeOrigin: true,
-                secure: false
+                rewrite: (path) => path.replace(/^\/register/, '/register')
             }
         }
     }
