@@ -34,6 +34,9 @@ app.use(express.json());
 
 // Call static upload file:
 
+// Cors:
+app.use(require('./src/middlewares/cors'));
+
 // Auth check:
 
 // Run logger:
