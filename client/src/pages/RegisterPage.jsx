@@ -8,15 +8,31 @@ export default function RegisterPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     
-    function registerUser(ev) {     
-        //! ERROR cause: mismatch between server & client address   
-        //! fix: integrate cors 
-        ev.preventDefault();
-        axios.post('/register', {
-            name,
-            email,
-            password
-        })
+    // function registerUser(ev) {     
+    //     //! ERROR cause: mismatch between server & client address   
+    //     //! fix: integrate cors 
+    //     ev.preventDefault();
+    //     axios.post('/register', {
+    //         name,
+    //         email,
+    //         password
+    //     })
+    // }
+
+    const registerUser = async (userData) => {
+
+        try {
+
+            const response = await axios.post('http://localhost:4000/register', userData, {
+                withCredentials: true   // include cookies if necessary
+            });
+
+            console.log(response.data);
+
+        } catch (error) {
+            console.log(error);
+        };
+        
     }
 
     return (
