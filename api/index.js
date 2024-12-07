@@ -52,8 +52,6 @@ app.get('/test', (req, res) => {
     res.json('test ok');
 });
 
-//! REGISTER TESTING !!
-
 //? Homepath:
 app.all('/', (req, res) => {
     res.send({
