@@ -8,7 +8,7 @@ export default function RegisterPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     
-    function registerUser(ev) {     //! BIG ERROR
+    function registerUser(ev) {     //! BIG ERROR   fix: integrate cors 
         ev.preventDefault();
         axios.post('/register', {
             name,
