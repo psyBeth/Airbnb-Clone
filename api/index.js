@@ -33,6 +33,7 @@ dbConnection();
 app.use(express.json());
 
 // Call static upload file:
+app.use('./upload', express.static('./upload'));
 
 // Cors:
 app.use(require('./src/middlewares/cors'));
