@@ -5,6 +5,7 @@ import LoginPage from './pages/loginPage';
 import Layout from './Layout';
 import RegisterPage from './pages/RegisterPage';
 import axios from 'axios';
+import React from 'react';
 
 axios.defaults.baseURL = 'http://localhost:4000'
 
