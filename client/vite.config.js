@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
+//! THERE IS A MAJOR PROXY ISSUE
+
 export default defineConfig({
     plugins: [react()],
     server: {
