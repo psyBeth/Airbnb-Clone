@@ -24,7 +24,7 @@ module.exports = {
         const auth = req.header?.authorization || null;  // Token ...tokenKey... // Bearer ...accessToken...
         const tokenKey = auth ? auth.split(' ') : null;  // ['Token', '...tokenKey...'] // ['Bearer', '...accessToken...']
 
-        let message = null, resuly = {};
+        let message = null, result = {};
 
         if(tokenKey && tokenKey[0] == 'Token') {
             result = await Token.deleteOne({token: tokenKey[1]});
