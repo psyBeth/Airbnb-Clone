@@ -33,9 +33,13 @@ const UserSchema = new mongoose.Schema({
         // validate: ... (validation - pre(save))
     },
 
-    password: {
+    passwordHash: {
         type: String,
-        trim: true,
+        required: true
+    },
+
+    passwordSalt: {
+        type: String,
         required: true
     },
 
