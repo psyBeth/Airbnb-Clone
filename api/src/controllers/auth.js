@@ -39,6 +39,12 @@ module.exports = {
                         token: passwordEncrypt(user._id + Date.now())
                     })
 
+                    res.send({
+                        error: false,
+                        token: tokenData.token,
+                        user
+                    });
+
                 } else {
                     res.errorStatusCode = 401;
                     throw new Error('This account is not active.');
