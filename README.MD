@@ -19,3 +19,5 @@
 - **Cors:** Cross-Origin Resource Sharing (CORS) in Node.js applications, allows controlled access to resources from different origins.
 - **express-async-errors:** Package that automatically handles asynchronous errors in Express routes, eliminating the need for try-catch blocks in each route handler.
 - **morgan:** HTTP request logger middleware for Node.js, used to log request details in Express applications.
+- **pbdkf2Sync:** Node.js method for securely hashing passwords using the PBKDF2 algorithm with a synchronous API.
+- **randomBytes:** Node.js method for generating cryptographically secure random data.
