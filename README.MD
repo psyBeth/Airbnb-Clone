@@ -4,7 +4,7 @@
 
 - description here 
 
-## Tools and frameworks used:
+## Tools and frameworks used:   //todo: categorize
 
 - **React.js:** JavaScript library for building user interfaces using reusable components.
 - **Vite:** Build tool for modern web projects, offering quick development and optimized builds.
