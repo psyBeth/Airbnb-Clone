@@ -4,6 +4,8 @@ const User = require('../models/user');
 const Token = require('../models/token');
 const passwordEncrypt = require('../helpers/passwordEncrypt');
 
+//! TODO: JWT will be added.
+
 module.exports = {
     
     login: async (req, res) => {
