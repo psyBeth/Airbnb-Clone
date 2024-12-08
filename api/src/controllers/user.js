@@ -1,6 +1,6 @@
 'use strict'
 
-const passwordEncrypt = require('../helpers/passwordEncrypt');
+const { hashPassword, verifyPassword } = require('../helpers/passwordEncrypt');
 const Token = require('../models/token');
 const User = require('../models/user');
 
@@ -56,6 +56,10 @@ module.exports = {
         // for the new records  //! warning
         req.body.isStaff = false;
         req.body.isAdmin = false;
+
+        const { hash, salt } = hashPassword(req.body.password);
+        req.body.passwordHash = hash;
+        req.body.passwordSalt = salt;
 
         const data = await User.create(req.body);
 
@@ -119,6 +123,8 @@ module.exports = {
         };
         
         const customFilters = req.user?.isAdmin ? {_id: req.params.id} : {_id: req.user.id};
+
+        
 
         //! here: do not allow changing admin/staff
 
