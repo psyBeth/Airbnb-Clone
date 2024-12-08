@@ -11,8 +11,8 @@ module.exports = async (req, res, next) => {
         //! Simple Token
         const tokenData = await Token.findOne({ token: tokenKey[1] }).populate('userId');
         req.user = tokenData ? tokenData.userId : undefined;
-        
+
     };
 
-    nixt();
+    next();
 }
