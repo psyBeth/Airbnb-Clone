@@ -10,7 +10,6 @@ export default function RegisterPage() {
     
     // function registerUser(ev) {     
     //     //! ERROR cause: mismatch between server & client address   
-    //     //! fix: integrate cors 
     //     ev.preventDefault();
     //     axios.post('/register', {
     //         name,
@@ -23,7 +22,7 @@ export default function RegisterPage() {
 
         try {
 
-            const response = await axios.post('http://localhost:4000/register', userData, {
+            const response = await axios.post('http://localhost:5173/register', userData, {
                 withCredentials: true   // include cookies if necessary
             });
 
