@@ -124,7 +124,12 @@ module.exports = {
         
         const customFilters = req.user?.isAdmin ? {_id: req.params.id} : {_id: req.user.id};
 
-        
+        if(req.body.password) {
+            const { hash, salt } = hashPassword(req.body.password);
+            req.body.passwordHash = hash;
+            req.body.passwordSalt = salt;
+            delete req.body.password;
+        }
 
         //! here: do not allow changing admin/staff
 
