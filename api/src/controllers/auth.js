@@ -34,12 +34,16 @@ module.exports = {
 
                 if(user.isActive) {
 
+                    //! SIMPLE TOKEN:
                     let tokenData = await Token.findOne({ userId: user._id });
 
                     if(!tokenData) tokenData = await Token.create({
                         userId: user._id,
                         token: passwordEncrypt(user._id + Date.now())
                     })
+
+                    //! JWT:
+                    const accessToken = jwt.sign(user.toJSON(), process.env.ACCESS_KEY, { expiresIn: '3d' });
 
                     res.send({
                         error: false,
