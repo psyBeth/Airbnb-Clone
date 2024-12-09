@@ -43,7 +43,7 @@ module.exports = {
                     })
 
                     //! JWT:
-                    const accessToken = jwt.sign(user.toJSON(), process.env.ACCESS_KEY, { expiresIn: '3d' });
+                    const accessToken = jwt.sign(user.toJSON(), process.env.ACCESS_KEY, { expiresIn: '30m' });
 
                     res.send({
                         error: false,
