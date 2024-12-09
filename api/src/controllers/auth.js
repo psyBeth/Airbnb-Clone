@@ -44,10 +44,12 @@ module.exports = {
 
                     //! JWT:
                     const accessToken = jwt.sign(user.toJSON(), process.env.ACCESS_KEY, { expiresIn: '30m' });
+                    const refreshToken = jwt.sign({ _id: user._id, password: user.password }, process.env.REFRESH_KEY, { expiresIn: '3d' });
 
                     res.send({
                         error: false,
                         token: tokenData.token,
+                        bearer: { accessToken, refreshToken },
                         user
                     });
 
