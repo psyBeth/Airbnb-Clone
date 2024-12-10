@@ -100,9 +100,33 @@ module.exports = {
 
                     if(_id && password) {
 
+                        const user = await User.findOne({_id});
+
+                        if(user && user.password == password) {
+
+                            if(user.isActive) {
+
+                                //! JWT:
+                                const accessToken = jwt.sign(user.toJSON(), process.env.ACCESS_KEY, { expiresIn: '30m' });
+
+                                res.send({
+                                    error: false,
+                                    bearer: { accessToken }
+                                });
+
+                            } else {
+                                res.errorStatusCode = 401;
+                                throw new Error('This account is not active.');
+                            }
+
+                        } else {
+                            res.errorStatusCode = 401;
+                            throw new Error('Wrong id or password.');
+                        }
+
                     } else {
                         res.errorStatusCode = 401;
-                        throw new Error('Please enter id and password.')
+                        throw new Error('Please enter id and password.');
                     }
 
                 }
@@ -111,7 +135,7 @@ module.exports = {
 
         } else {
             res.errorStatusCode = 401;
-            throw new Error('Please enter token.refresh.')
+            throw new Error('Please enter token.refresh.');
         }
         
     },
