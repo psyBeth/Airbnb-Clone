@@ -85,6 +85,34 @@ module.exports = {
             }
         */
 
+        const refreshToken = req.body?.bearer?.refreshToken;
+
+        if(refreshToken) {
+
+            jwt.verify(refreshToken, process.env.REFRESH_KEY, async function (err, userData) {
+
+                if(err) {
+                    res.errorStatusCode = 401;
+                    throw err;
+                } else {
+
+                    const { _id, password } = userData;
+
+                    if(_id && password) {
+
+                    } else {
+                        res.errorStatusCode = 401;
+                        throw new Error('Please enter id and password.')
+                    }
+
+                }
+
+            })
+
+        } else {
+            res.errorStatusCode = 401;
+            throw new Error('Please enter token.refresh.')
+        }
         
     },
 
@@ -112,7 +140,7 @@ module.exports = {
 
                 //! JWT
                 message = 'No need any process for logout. You must delete JWT tokens.'
-                
+
             }
         }
 
