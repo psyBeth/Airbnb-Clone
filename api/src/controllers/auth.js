@@ -100,9 +100,20 @@ module.exports = {
 
         let message = null, result = {};
 
-        if(tokenKey && tokenKey[0] == 'Token') {
-            result = await Token.deleteOne({token: tokenKey[1]});
-            message = 'Token deleted, logout OK.'
+        if(tokenKey) {
+
+            if(tokenKey[0] == 'Token') {
+
+                //! Simple Token
+                result = await Token.deleteOne({token: tokenKey[1]});
+                message = 'Token deleted. Logout OK.';
+
+            } else {
+
+                //! JWT
+                message = 'No need any process for logout. You must delete JWT tokens.'
+                
+            }
         }
 
         res.send({
