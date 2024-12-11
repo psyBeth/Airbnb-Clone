@@ -8,7 +8,7 @@ export default defineConfig({
     server: {
         proxy: {
             '/register': {
-                target: 'http://localhost:4000', // backend server
+                target: 'http://localhost:5173', // backend server
                 changeOrigin: true,
                 rewrite: (path) => path.replace(/^\/register/, '/register')
             }
