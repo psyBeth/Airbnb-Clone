@@ -7,7 +7,7 @@ import RegisterPage from './pages/RegisterPage';
 import axios from 'axios';
 import React from 'react';
 
-axios.defaults.baseURL = 'http://localhost:4000'
+axios.defaults.baseURL = 'http://localhost:5173'
 
 function App() {
 
