@@ -68,6 +68,53 @@ module.exports = {
         }
     },
 
+    //! IM TRYING SOMETHIN HERE IN CASE USER.CREATE IS NOT WORKING
+
+    register: async(req, res) => {
+
+        const { username, email, password } = req.body;
+
+        if(username && email && password) {
+
+            const existingUser = await User.findOne({$or: [{username}, {email}] });
+
+            if(existingUser) {
+                res.errorStatusCode = 400;
+                throw new Error('This username or email is already registered.')
+            };
+
+            const hashedPassword = passwordEncrypt(password);
+
+            //! Create new user:
+            const newUser = await User.create({
+                username, 
+                email,
+                password: hashedPassword,
+                isActive: true
+            });
+
+            //! JWT:
+            const accessToken = jwt.sign(newUser.toJSON(), process.env.ACCESS_KEY, { expiresIn: '30m' });
+            const refreshToken = jwt.sign({ _id: newUser._id, password: newUser.password }, process.env.REFRESH_KEY, { expiresIn: '3d' });
+
+            res.status(201).send({
+                error: false,
+                message: 'User register OK',
+                bearer: { accessToken, refreshToken },
+                user: {
+                    id: newUser._id,
+                    username: newUser.username,
+                    email: newUser.email
+                }
+            });
+
+        } else {
+            res.errorStatusCode = 400;
+            throw new Error('Please enter all required fields.');
+        };
+
+    },
+
     refresh: async (req, res) => {
         /*
             #swagger.tags = ['Authentication']
