@@ -4,7 +4,7 @@ export default function IndexPage() {
 
         <div>
 
-            index
+            index page will be here
 
         </div>
     )

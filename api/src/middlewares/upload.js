@@ -1,7 +1,6 @@
 'use strict'
 
 // app.use(upload.array('fieldName'));
-//! INTEGRATE
 
 const multer = require('multer');
 
