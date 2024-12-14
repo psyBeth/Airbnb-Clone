@@ -3,7 +3,7 @@
 - frontend api calls point to the correct backend URL
 - backend server is running and has the correct route ( POST /api/register)
 - proxy config (if any) correct
-- form submission use preventDefault() to avoid navigation issues
+- form submission use preventDefault() to avoid navigation issues (checked?)
 - CORS is properly set up on the backend
 
 
