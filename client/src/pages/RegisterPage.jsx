@@ -18,9 +18,11 @@ export default function RegisterPage() {
     //     })
     // }
 
-    const registerUser = async (userData) => {
+    const registerUser = async (ev) => {
+        ev.preventDefault();
 
         try {
+            const userData = { name, email, password };
 
             const response = await axios.post('http://localhost:5173/register', userData, {
                 withCredentials: true   // include cookies if necessary
