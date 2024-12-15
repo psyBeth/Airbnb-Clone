@@ -4,8 +4,7 @@
 - backend server is running and has the correct route ( POST /api/register)
 - proxy config (if any) correct
 - form submission use preventDefault() to avoid navigation issues (checked?)
-- CORS is properly set up on the backend
-
+- CORS is properly set up on the backend -> integrate the packages and the syntax
 
 # toolbox (will be edited)
 - yarn 
