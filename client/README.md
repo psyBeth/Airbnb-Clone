@@ -6,13 +6,6 @@
 - form submission use preventDefault() to avoid navigation issues (will check again)
 - CORS is properly set up on the backend -> integrate the packages and the syntax
 
-# toolbox (will be edited)
-- yarn 
-- vite
-- tailwind css
-- react-router-dom
-
-
 
 # React + Vite
 
