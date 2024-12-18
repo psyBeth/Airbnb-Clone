@@ -2,7 +2,7 @@
 
 ## Airbnb 
 
-- description here 
+- 
 
 ## Tools and frameworks used:   //todo: categorize
 
